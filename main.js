@@ -1,7 +1,11 @@
-var userChoice = prompt("Do you choose rock, paper or scissors?");
-var currentUserChoice = userChoice;
-document.getElementById("users_choice_text").innerHTML = currentUserChoice;
+document.getElementById("start_game_button").onclick = rungame;
 
+function rungame(){
+
+ var userChoice = prompt("Do you choose rock, paper or scissors?");
+  var currentUserChoice = userChoice;
+  document.getElementById("users_choice_text").innerHTML = currentUserChoice;
+// }
 
 var computerChoice = Math.random();
 
@@ -53,4 +57,6 @@ var compare = function(choice1,choice2){
         }
     }
 };
+
 compare(currentUserChoice,currentComputerChoice);
+}
